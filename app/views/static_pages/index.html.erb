@@ -1,0 +1,16 @@
+<h1>STATICPAGES INDEX PAGE</h1>
+
+<%= form_with(url: static_pages_path, method: :get) do |f| %>
+  <%= f.label :user_id %>
+  <%= f.text_field :user_id %>
+  <%= f.submit "Get User's Photos" %>
+<% end %>
+
+<ul>
+  <% @photo_links.each do |ph| %>
+    <li>
+      <%# link_to ph, ph %>
+      <%= image_tag(ph) %>
+    </li>
+  <% end %>
+</ul>

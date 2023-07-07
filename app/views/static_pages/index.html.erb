@@ -10,7 +10,7 @@
   <% @photo_links.each do |ph| %>
     <li>
       <%# link_to ph, ph %>
-      <%= image_tag(ph) %>
+      <%= link_to(image_tag(ph), ph, target: "_blank") %>
     </li>
   <% end %>
 </ul>

@@ -9,7 +9,6 @@ class StaticPagesController < ApplicationController
         @photo_links = photos.map { |ph| Flickr.url_m(ph) }
       elsif params[:user_id] == ""
         photos = flickr.photos.getRecent(per_page: 15)
-        p photos
         @photo_links = photos.map { |ph| Flickr.url_m(ph) }
       end
     end
